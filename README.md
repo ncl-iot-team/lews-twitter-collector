@@ -25,5 +25,6 @@ docker run -e TWITTER_ACCESS_TOKEN="<access token>" \
 -e TWITTER_ACCESS_TOKEN_SECRET="<access token secret>" \
 -e TWITTER_CONSUMER_KEY="<consumer key>" \
 -e TWITTER_CONSUMER_SECRET="<consumer secret>" \
+-e TWITTER_FILTER_TRACK="<filter tracks>" \
 -e KAFKA_BROKER="<kafka-broker-host:port>" lews-twitter-collector
 ```

@@ -45,4 +45,4 @@ auth.set_access_token(access_token, access_token_secret)
 
 stream = Stream(auth, l)
 
-stream.filter(track="rain")
+stream.filter(track=os.getenv('TWITTER_FILTER_TRACK','rain'))
