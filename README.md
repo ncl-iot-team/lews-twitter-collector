@@ -6,7 +6,7 @@ This program collects Twitter data in real-time and publishes to a Kafka broker
 
 - Docker 18.09.0 or higher
 
-- Kafka Brocker
+- Kafka Broker
 
 - Twitter API Credentials (access token, access token secret, consumer key, consumer secret)
 
