@@ -1,2 +1,2 @@
 kafka-python==1.4.7
-tweepy
+tweepy==3.8.0
