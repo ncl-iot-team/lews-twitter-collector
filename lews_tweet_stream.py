@@ -34,7 +34,7 @@ class StdOutListener(StreamListener):
 
     def on_data(self, data):
 
-        tweet_json=json.dumps(data)
+        tweet_json=data
     
         producer.send(kafka_topic, tweet_json)
     
