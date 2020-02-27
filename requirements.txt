@@ -1,2 +1,2 @@
-kafka-python==1.4.7
+kafka-python
 tweepy==3.8.0
