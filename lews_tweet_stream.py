@@ -4,6 +4,7 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaProducer
 
+
 # Print Twitter credentials -- Testing
 #print(os.getenv('TWITTER_ACCESS_TOKEN', 'NA'))
 #print(os.getenv('TWITTER_ACCESS_TOKEN_SECRET', 'NA'))
@@ -38,7 +39,7 @@ class StdOutListener(StreamListener):
     
         producer.send(kafka_topic, tweet_json)
     
-        print (data)
+        print (json.loads(data))
     
         return True
 
@@ -58,4 +59,4 @@ auth.set_access_token(access_token, access_token_secret)
 
 stream = Stream(auth, l)
 
-stream.filter(track=twitter_stream_filter,is_async=True)
+stream.filter(track=twitter_stream_filter)
