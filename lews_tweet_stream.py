@@ -39,7 +39,7 @@ class StdOutListener(StreamListener):
     
         producer.send(kafka_topic, tweet_json)
     
-        print (json.loads(data))
+        print (json.dumps(data))
     
         return True
 
