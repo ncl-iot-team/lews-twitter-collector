@@ -35,13 +35,13 @@ class StdOutListener(StreamListener):
 
     def on_data(self, data):
 
-        tweet_json=data
+        tweet_data = json.loads(data)
+
+        tweet_json = json.dumps(tweet_data)
     
         producer.send(kafka_topic, tweet_json)
 
-        json_string = json.loads(tweet_json)
-    
-        print (json.dumps(json_string))
+        print (tweet_json)
     
         return True
 
