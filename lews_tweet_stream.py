@@ -38,8 +38,10 @@ class StdOutListener(StreamListener):
         tweet_json=data
     
         producer.send(kafka_topic, tweet_json)
+
+        json_string = json.loads(tweet_json)
     
-        print (json.dumps(tweet_json))
+        print (json.dumps(json_string))
     
         return True
 
