@@ -1,0 +1,3 @@
+[submodule "procstream-kafka-python"]
+	path = procstream-kafka-python
+	url = git@github.com:nipunbalan/procstream-kafka-python.git
