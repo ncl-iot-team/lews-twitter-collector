@@ -26,6 +26,8 @@ docker run -e TWITTER_ACCESS_TOKEN="<access token>" \
 -e TWITTER_CONSUMER_KEY="<consumer key>" \
 -e TWITTER_CONSUMER_SECRET="<consumer secret>" \
 -e TWITTER_FILTER_TRACK="<filter tracks>" \
--e KAFKA_BROKER="<kafka-broker-host:port>" \
--e KAFKA_TOPIC="<kafka-topic-to-publish-to>" lews-twitter-collector
+-e MODULE_NAME="LEWS-TWITTER-DATA-COLLECTOR" \
+-e CONSUMER_GROUP="LEWS-TWITTER-DATA-COLLECTOR-CG01" \
+-e KAFKA_TARGET_BOOTSTRAP_SERVERS="<kafka_bootstrap_server>" \
+-e KAFKA_TARGET_TOPIC="<topic>" lews-twitter-collector
 ```
