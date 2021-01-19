@@ -1,6 +1,6 @@
-# LEWS Twitter Data Collector
+# LEWS Data-pipeline Module for Twitter Data Collection
 
-This program collects Twitter data in real-time and publishes to a Kafka broker
+This is the pipeline module for Tweet collection using streaming API and publish to a Kafka topic
 
 ## Pre-Requisites
 
@@ -8,17 +8,39 @@ This program collects Twitter data in real-time and publishes to a Kafka broker
 
 - Kafka Broker
 
-- Twitter API Credentials (access token, access token secret, consumer key, consumer secret)
+- Streaming data in json format
 
+### Install and run Kafka Broker
+#### Ubuntu 18.04
+Follow https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-18-04
+#### Windows 
+Follow https://medium.com/@shaaslam/installing-apache-kafka-on-windows-495f6f2fd3c8
+#### MacOS
+Follow https://medium.com/pharos-production/apache-kafka-macos-installation-guide-a5a3754f09c
 
-## Building the Docker Image
+## Running in local environment
+### Install dependancies
+Install dependancies given in requirements.txt. 
+```bash
+pip install -r requirements.txt
+```
+
+### Running the module
+
+Running
+```bash
+python lews_tweet_collector.py
+```
+
+## Running in Docker (Recommended for Production)
+### Building the Docker Image
 
 
 ```bash
 docker build --tag lews-twitter-collector .
 ```
 
-## Usage
+### Usage
 
 ```bash
 docker run -e TWITTER_ACCESS_TOKEN="<access token>" \
